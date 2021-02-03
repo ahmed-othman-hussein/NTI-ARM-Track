@@ -1,0 +1,3 @@
+RCC_program.c:16:6:RCC_voidInit	16	static
+RCC_program.c:189:6:RCC_voidEnablePeripheralClock	16	static
+RCC_program.c:203:6:RCC_voidDisablePeripheralClock	16	static
