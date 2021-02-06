@@ -6,7 +6,7 @@
 #include "STD_TYPES.h"
 #include "BIT_MATH.h"
 
-//#include "RCC_interface.h"
+
 #include "GPIO_interface.h"
 #include "GPIO_private.h"
 
@@ -30,7 +30,7 @@ void SEV_voidDisable7Segment(u8 Copy_u8SevenSegmentNumber){
 }
 
 
-#if(Sev_TYPE==0)
+#if(SEV_TYPE==SEV_TYPE_Decoder)
 void SEV_voidSet7SegmentValue(u8 Copy_u8SevenSegmentNumber , u8 Copy_u8SevenSegmentValue )
 {
 
@@ -70,7 +70,7 @@ void SEV_voidSet7SegmentValue(u8 Copy_u8SevenSegmentNumber , u8 Copy_u8SevenSegm
 
 #endif
 
-#if(SEV_TYPE==1)
+#if(SEV_TYPE==SEV_TYPE_Anode)
 
 
 void SEV_voidSet7SegmentValue(u8 Copy_u8SevenSegmentNumber , u8 Copy_u8SevenSegmentValue )
@@ -112,7 +112,7 @@ void SEV_voidSet7SegmentValue(u8 Copy_u8SevenSegmentNumber , u8 Copy_u8SevenSegm
 
 #endif
 
-#if(SEV_TYPE==2)
+#if(SEV_TYPE==SEV_TYPE_Cathode)
 
 void SEV_voidSet7SegmentValue(u8 Copy_u8SevenSegmentNumber , u8 Copy_u8SevenSegmentValue )
 {
