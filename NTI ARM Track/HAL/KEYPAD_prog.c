@@ -20,10 +20,10 @@ void KEYPAD_voidInit()
 	//DIO_voidSetPinValue(DIO_U8_PORTB,KEYPAD_U8_COLUMN_4 ,DIO_U8_HIGH );
 	
 	/** OUTPUT		 1	  */
-	DIO_voidSetPinValue(DIO_U8_PORTB,KEYPAD_U8_ROW_1 ,DIO_U8_LOW );
-	DIO_voidSetPinValue(DIO_U8_PORTB,KEYPAD_U8_ROW_2 ,DIO_U8_LOW );
-	DIO_voidSetPinValue(DIO_U8_PORTB,KEYPAD_U8_ROW_3 ,DIO_U8_LOW );
-	DIO_voidSetPinValue(DIO_U8_PORTB,KEYPAD_U8_ROW_4 ,DIO_U8_LOW );
+	DIO_voidSetPinValue(DIO_U8_PORTB,KEYPAD_U8_ROW_1 ,DIO_U8_HIGH );
+	DIO_voidSetPinValue(DIO_U8_PORTB,KEYPAD_U8_ROW_2 ,DIO_U8_HIGH );
+	DIO_voidSetPinValue(DIO_U8_PORTB,KEYPAD_U8_ROW_3 ,DIO_U8_HIGH );
+	DIO_voidSetPinValue(DIO_U8_PORTB,KEYPAD_U8_ROW_4 ,DIO_U8_HIGH);
 	
 }
 
@@ -77,7 +77,7 @@ u8 KEYPAD_u8GetPressedKey(void)
 	LOC_u8ColumnValue  = DIO_u8GetPinValue(DIO_U8_PORTB,KEYPAD_U8_COLUMN_1 );
 	LOC_u8ColumnValue |= (DIO_u8GetPinValue(DIO_U8_PORTB,KEYPAD_U8_COLUMN_2))<< 1;
 	LOC_u8ColumnValue |= (DIO_u8GetPinValue(DIO_U8_PORTB,KEYPAD_U8_COLUMN_3))<< 2;
-	//LOC_u8ColumnValue |= (DIO_u8GetPinValue(DIO_U8_PORTB,KEYPAD_U8_COLUMN_4))<< 3;
+	LOC_u8ColumnValue |= (DIO_u8GetPinValue(DIO_U8_PORTB,KEYPAD_U8_COLUMN_4))<< 3;
 	
 	switch(LOC_u8ColumnValue)
 	{
@@ -110,7 +110,7 @@ u8 KEYPAD_u8GetPressedKey(void)
 	LOC_u8ColumnValue  = DIO_u8GetPinValue(DIO_U8_PORTB,KEYPAD_U8_COLUMN_1 );
 	LOC_u8ColumnValue |= (DIO_u8GetPinValue(DIO_U8_PORTB,KEYPAD_U8_COLUMN_2))<< 1;
 	LOC_u8ColumnValue |= (DIO_u8GetPinValue(DIO_U8_PORTB,KEYPAD_U8_COLUMN_3))<< 2;
-	//LOC_u8ColumnValue |= (DIO_u8GetPinValue(DIO_U8_PORTB,KEYPAD_U8_COLUMN_4))<< 3;
+	LOC_u8ColumnValue |= (DIO_u8GetPinValue(DIO_U8_PORTB,KEYPAD_U8_COLUMN_4))<< 3;
 
 	switch(LOC_u8ColumnValue)
 	{
@@ -144,7 +144,7 @@ u8 KEYPAD_u8GetPressedKey(void)
 	LOC_u8ColumnValue  = DIO_u8GetPinValue(DIO_U8_PORTB,KEYPAD_U8_COLUMN_1 );
 	LOC_u8ColumnValue |= (DIO_u8GetPinValue(DIO_U8_PORTB,KEYPAD_U8_COLUMN_2))<< 1;
 	LOC_u8ColumnValue |= (DIO_u8GetPinValue(DIO_U8_PORTB,KEYPAD_U8_COLUMN_3))<< 2;
-	//LOC_u8ColumnValue |= (DIO_u8GetPinValue(DIO_U8_PORTB,KEYPAD_U8_COLUMN_4))<< 3;
+	LOC_u8ColumnValue |= (DIO_u8GetPinValue(DIO_U8_PORTB,KEYPAD_U8_COLUMN_4))<< 3;
 	
 		switch(LOC_u8ColumnValue)
 	{
