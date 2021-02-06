@@ -13,6 +13,8 @@
 #define SEV_TYPE_Anode     1
 #define SEV_TYPE_Cathode   2
 
+#define SEV_TYPE           SEV_TYPE_Decoder
+
 void SEV_voidSet7SegmentValue(u8 Copy_u8SevenSegmentNumber , u8 Copy_u8SevenSegmentValue );
 void SEV_voidEnable7Segment(u8 Copy_u8SevenSegmentNumber);
 void SEV_voidDisable7Segment(u8 Copy_u8SevenSegmentNumber);
