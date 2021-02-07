@@ -61,22 +61,20 @@ int main(void)
 	RCC_voidEnablePeripheralClock(RCC_APB2, RCC_GPIOB_ID);
 
 
-	DIO_voidSetPinDirection(DIO_U8_PORTB,DIO_U8_PIN6, DIO_INPUT_PULL_UP_DOWN);
-	DIO_voidSetPinDirection(DIO_U8_PORTB,DIO_U8_PIN7, DIO_INPUT_PULL_UP_DOWN);
-	DIO_voidSetPinDirection(DIO_U8_PORTB,DIO_U8_PIN8, DIO_INPUT_PULL_UP_DOWN);
-	DIO_voidSetPinDirection(DIO_U8_PORTB,DIO_U8_PIN9, DIO_INPUT_PULL_UP_DOWN);
-	DIO_voidSetPinDirection(DIO_U8_PORTB,DIO_U8_PIN10, DIO_OUTPUT_2MHZ_PP);
-	DIO_voidSetPinDirection(DIO_U8_PORTB,DIO_U8_PIN11, DIO_OUTPUT_2MHZ_PP);
-	DIO_voidSetPinDirection(DIO_U8_PORTB,DIO_U8_PIN12, DIO_OUTPUT_2MHZ_PP);
+	DIO_voidSetPinDirection(DIO_U8_PORTB,DIO_U8_PIN6, DIO_OUTPUT_2MHZ_PP);
+	DIO_voidSetPinDirection(DIO_U8_PORTB,DIO_U8_PIN7, DIO_OUTPUT_2MHZ_PP);
+	DIO_voidSetPinDirection(DIO_U8_PORTB,DIO_U8_PIN8, DIO_OUTPUT_2MHZ_PP);
+	DIO_voidSetPinDirection(DIO_U8_PORTB,DIO_U8_PIN9, DIO_OUTPUT_2MHZ_PP);
+	DIO_voidSetPinDirection(DIO_U8_PORTB,DIO_U8_PIN10,DIO_INPUT_PULL_UP_DOWN);
+	DIO_voidSetPinDirection(DIO_U8_PORTB,DIO_U8_PIN11,DIO_INPUT_PULL_UP_DOWN);
+	DIO_voidSetPinDirection(DIO_U8_PORTB,DIO_U8_PIN12,DIO_INPUT_PULL_UP_DOWN);
 
 	KEYPAD_voidInit();
 
-
-
-    x=KEYPAD_u8GetPressedKey() ;
+ 
 	SEV_voidEnable7Segment(SEV_LEFT);
 	SEV_voidEnable7Segment(SEV_RIGHT);
-	SEV_voidSet7SegmentValue( SEV_RIGHT, X );
+	
 
 
 	/* Loop forever */
@@ -84,7 +82,20 @@ int main(void)
 	{
 
 
+	x=KEYPAD_u8GetPressedKey();
 
+		switch(x){
+		case '0':x=0; break;
+		case '1':x=1; break;
+		case '2':x=2; break;
+		case '3':x=3; break;
+		case '4':x=4; break;
+		case '5':x=5; break;
+		case '6':x=6; break;
+		case '7':x=7; break;
+		case '8':x=8; break;
+		case '9':x=9; break;
+		}
 
 	}
 }
