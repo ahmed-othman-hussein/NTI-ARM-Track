@@ -2,7 +2,7 @@
  * EXTI_config.h
  *
  *  Created on: Feb 8, 2021
- *      Author: Boon
+ *      Author: ahmed
  */
 
 #ifndef EXTI_CONFIG_H_
