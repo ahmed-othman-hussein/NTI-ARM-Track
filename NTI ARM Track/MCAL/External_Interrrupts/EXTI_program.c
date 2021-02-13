@@ -2,7 +2,7 @@
  * EXTI_program.c
  *
  *  Created on: Feb 8, 2021
- *      Author: Boon
+ *      Author: ahmed
  */
 
 #include "STD_TYPES.h"
