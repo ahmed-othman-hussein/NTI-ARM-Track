@@ -2,7 +2,7 @@
  * NVIC_interface.h
  *
  *  Created on: Feb 7, 2021
- *      Author: Boon
+ *      Author: ahmed
  */
 
 #ifndef NVIC_INTERFACE_H_
