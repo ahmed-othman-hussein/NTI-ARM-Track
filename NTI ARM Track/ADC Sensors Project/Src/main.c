@@ -60,14 +60,16 @@ u32 ahmed(void){
 	return i;
 }
 
-static volatile u16 LDR =0;
-static volatile u16 POT =0;
+static volatile u32 LDR =0;
+static volatile u32 POT =0;
+static volatile u32 inputVoltage =0;
+static volatile u32 inputVoltage1 =0;
 
 int main(void)
 {
 
-	u8 SHOWLDR [2];
-	u8 SHOWPOT [2];
+	u8 SHOWLDR [4];
+	u8 SHOWPOT [4];
 
 
 	RCC_voidInit();
@@ -105,10 +107,10 @@ int main(void)
 		{
 			flag = 1;
 
-			LDR=Adc_voidReadADC(CH0,ADC_SampleTime_Cycles_5);
+			LDR=Adc_voidReadADC(CH0,ADC_SampleTime_Cycles_5)/1;
 
 
-			// inputVoltage = (SIG1) / 4096 * 3;
+			 inputVoltage = (LDR* 33) / 4096 ;
 
 		}
 		else if(flag == 1)
@@ -118,7 +120,7 @@ int main(void)
 
 			POT=Adc_voidReadADC(CH1,ADC_SampleTime_Cycles_5);
 
-			// inputVoltage = (SIG1) / 4096 * 3;
+			 inputVoltage1 = (POT*33) / 4096 ;
 
 		}
 
@@ -127,14 +129,14 @@ int main(void)
 	/* Loop forever */
 	for(;;)
 	{
-		LCD_vidClear( );
+		//LCD_vidClear( );
 		STK_voidIntervalSingle(10000-1,ahmed2);
 		LCD_vidGotoXY( 1 , '\0' );
-		itoa(LDR/10,SHOWLDR,10);
+		itoa(inputVoltage/10,SHOWLDR,10);
 
 		LCD_vidWriteString("LDR(volt):");
 		LCD_vidWriteString(SHOWLDR);
-		itoa(LDR%10,SHOWLDR,10);
+		itoa(inputVoltage%10,SHOWLDR,10);
 		LCD_vidWriteString(SHOWLDR);
 		LCD_vidWriteString(" V");
 
@@ -143,15 +145,15 @@ int main(void)
 
 
 		LCD_vidGotoXY( 2 , '\0' );
-		itoa(POT/10,SHOWPOT,10);
+		itoa(inputVoltage1/10,SHOWPOT,10);
 
 		LCD_vidWriteString("POT(volt):");
 		LCD_vidWriteString(SHOWPOT);
 
-		itoa(POT%10,SHOWPOT,10);
+		itoa(inputVoltage1%10,SHOWPOT,10);
 		LCD_vidWriteString(SHOWPOT);
 		LCD_vidWriteString(" V");
-		delay_us(1000);
+		delay_us(100);
 
 
 
