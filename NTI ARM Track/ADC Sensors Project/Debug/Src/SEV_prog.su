@@ -1,0 +1,3 @@
+SEV_prog.c:18:6:SEV_voidEnable7Segment	16	static
+SEV_prog.c:25:6:SEV_voidDisable7Segment	16	static
+SEV_prog.c:34:6:SEV_voidSet7SegmentValue	32	static

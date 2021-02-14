@@ -1,0 +1,5 @@
+Lcd.c:15:6:_delay_ms	24	static,ignoring_inline_asm
+Lcd.c:26:7:writeByte	24	static
+Lcd.c:123:6:Lcd_init	16	static
+Lcd.c:162:6:Lcd_writeChar	24	static
+Lcd.c:172:6:Lcd_writeString	24	static

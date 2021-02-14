@@ -1,0 +1,2 @@
+KEYPAD_prog.c:14:6:KEYPAD_voidInit	8	static
+KEYPAD_prog.c:30:4:KEYPAD_u8GetPressedKey	16	static

@@ -1,0 +1,2 @@
+LED_Animation.c:17:6:delay_us	24	static,ignoring_inline_asm
+LED_Animation.c:31:5:main	24	static
