@@ -1,0 +1,2 @@
+IR_Prog.c:24:6:voidTakeAction	16	static
+IR_Prog.c:57:6:voidGetFrame	16	static
